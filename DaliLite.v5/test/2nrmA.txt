@@ -1,0 +1,83 @@
+# Job: systematic
+# Query: 2nrmA
+# No:  Chain   Z    rmsd lali nres  %id PDB  Description
+   1:  2nrm-A 30.8  0.0  146   146  100   MOLECULE: MYOGLOBIN;                                                 
+   2:  101m-A 22.3  1.5  146   154   42   MOLECULE: MYOGLOBIN;                                                 
+   3:  5cnb-A 22.3  1.5  145   152   44   MOLECULE: MYOGLOBIN;                                                 
+   4:  1a00-A 17.6  1.9  134   141   28   MOLECULE: HEMOGLOBIN (ALPHA CHAIN);                                  
+   5:  1bin-A 13.3  3.0  131   143   15   MOLECULE: LEGHEMOGLOBIN A;                                           
+   6:  5ohe-A 11.1  3.0  127   152   15   MOLECULE: GLOBIN-COUPLED HISTIDINE KINASE;                           
+   7:  1all-A  7.9  3.2  112   160   12   MOLECULE: ALLOPHYCOCYANIN;                                           
+   8:  1a87-A  6.3  3.2  111   297    9   MOLECULE: COLICIN N;                                                 
+
+# Structural equivalences
+   1: 2nrm-A 2nrm-A     1 - 146 <=>    1 - 146   (ALA    2  - GLY  147  <=> ALA    2  - GLY  147 )                          
+   2: 2nrm-A 101m-A     1 -  47 <=>    6 -  52   (ALA    2  - GLN   48  <=> GLY    5  - THR   51 )                          
+   2: 2nrm-A 101m-A    48 - 115 <=>   54 - 121   (ALA   49  - GLY  116  <=> ALA   53  - PRO  120 )                          
+   2: 2nrm-A 101m-A   116 - 146 <=>  124 - 154   (LEU  117  - GLY  147  <=> PHE  123  - GLY  153 )                          
+   3: 2nrm-A 5cnb-A     1 -  46 <=>    5 -  50   (ALA    2  - ALA   47  <=> GLY    5  - LYS   50 )                          
+   3: 2nrm-A 5cnb-A    47 - 114 <=>   52 - 119   (GLN   48  - ALA  115  <=> GLU   52  - HIS  119 )                          
+   3: 2nrm-A 5cnb-A   115 - 145 <=>  122 - 152   (GLY  116  - SER  146  <=> ASP  122  - GLN  152 )                          
+   4: 2nrm-A 1a00-A     1 -  42 <=>    5 -  46   (ALA    2  - PHE   43  <=> ALA    5  - PHE   46 )                          
+   4: 2nrm-A 1a00-A    49 - 114 <=>   48 - 113   (ASP   50  - ALA  115  <=> LEU   48  - LEU  113 )                          
+   4: 2nrm-A 1a00-A   115 - 140 <=>  116 - 141   (GLY  116  - LYS  141  <=> GLU  116  - ARG  141 )                          
+   5: 2nrm-A 1bin-A     1 -  45 <=>    6 -  50   (ALA    2  - ILE   46  <=> LYS    6  - GLY   50 )                          
+   5: 2nrm-A 1bin-A    50 -  73 <=>   52 -  75   (ILE   51  - ALA   74  <=> ASP   52  - GLN   75 )                          
+   5: 2nrm-A 1bin-A    74 -  77 <=>   78 -  81   (LYS   75  - HIS   78  <=> ALA   78  - THR   81 )                          
+   5: 2nrm-A 1bin-A    80 -  83 <=>   83 -  86   (ILE   81  - PRO   84  <=> VAL   83  - ALA   86 )                          
+   5: 2nrm-A 1bin-A    84 -  89 <=>   88 -  93   (LEU   85  - ALA   90  <=> LEU   88  - ALA   93 )                          
+   5: 2nrm-A 1bin-A    91 - 115 <=>   94 - 118   (LYS   92  - GLY  116  <=> GLN   94  - GLY  118 )                          
+   5: 2nrm-A 1bin-A   116 - 138 <=>  121 - 143   (LEU  117  - ASN  139  <=> TRP  121  - ALA  143 )                          
+   6: 2nrm-A 5ohe-A     1 -  30 <=>   15 -  44   (ALA    2  - LYS   31  <=> GLY   21  - GLY   50 )                          
+   6: 2nrm-A 5ohe-A    32 -  42 <=>   45 -  55   (HIS   33  - PHE   43  <=> HIS   51  - GLY   61 )                          
+   6: 2nrm-A 5ohe-A    53 -  70 <=>   56 -  73   (ASN   54  - LEU   71  <=> GLU   62  - LEU   79 )                          
+   6: 2nrm-A 5ohe-A    71 -  90 <=>   76 -  95   (LEU   72  - THR   91  <=> GLY   82  - ARG  101 )                          
+   6: 2nrm-A 5ohe-A    92 - 115 <=>   96 - 119   (HIS   93  - GLY  116  <=> ILE  102  - TYR  125 )                          
+   6: 2nrm-A 5ohe-A   117 - 140 <=>  129 - 152   (ASP  118  - LYS  141  <=> LEU  135  - ARG  158 )                          
+   7: 2nrm-A 1all-A     4 -  10 <=>   36 -  42   (ASP    5  - TRP   11  <=> VAL   38  - MET   44 )                          
+   7: 2nrm-A 1all-A    11 -  14 <=>   44 -  47   (GLY   12  - GLU   15  <=> GLY   46  - GLU   49 )                          
+   7: 2nrm-A 1all-A    19 -  36 <=>   48 -  65   (THR   20  - GLN   37  <=> ARG   50  - VAL   67 )                          
+   7: 2nrm-A 1all-A    37 -  42 <=>   69 -  74   (LYS   38  - PHE   43  <=> GLY   71  - ALA   78 )                          
+   7: 2nrm-A 1all-A    56 -  73 <=>   77 -  94   (VAL   57  - ALA   74  <=> THR   81  - GLY   98 )                          
+   7: 2nrm-A 1all-A    75 -  80 <=>  101 - 106   (GLY   76  - ILE   81  <=> THR  105  - ILE  110 )                          
+   7: 2nrm-A 1all-A    81 -  90 <=>  108 - 117   (LEU   82  - THR   91  <=> VAL  112  - SER  121 )                          
+   7: 2nrm-A 1all-A    92 - 112 <=>  118 - 138   (HIS   93  - GLU  113  <=> LEU  122  - SER  142 )                          
+   7: 2nrm-A 1all-A   115 - 136 <=>  139 - 160   (GLY  116  - GLU  137  <=> LEU  143  - SER  174 )                          
+   8: 2nrm-A 1a87-A     1 -   4 <=>  167 - 170   (ALA    2  - ASP    5  <=> LYS  257  - LYS  260 )                          
+   8: 2nrm-A 1a87-A     5 -  16 <=>  172 - 183   (ALA    6  - ASP   17  <=> ASP  262  - VAL  273 )                          
+   8: 2nrm-A 1a87-A    20 -  30 <=>  184 - 194   (ILE   21  - LYS   31  <=> ASN  274  - ASN  284 )                          
+   8: 2nrm-A 1a87-A    32 -  39 <=>  195 - 202   (HIS   33  - PHE   40  <=> LEU  285  - ALA  292 )                          
+   8: 2nrm-A 1a87-A    55 -  73 <=>  203 - 221   (ALA   56  - ALA   74  <=> ASP  293  - THR  311 )                          
+   8: 2nrm-A 1a87-A    75 -  78 <=>  222 - 225   (GLY   76  - ALA   79  <=> GLY  312  - GLY  315 )                          
+   8: 2nrm-A 1a87-A    80 -  91 <=>  226 - 237   (ILE   81  - LYS   92  <=> PRO  316  - GLY  327 )                          
+   8: 2nrm-A 1a87-A    92 -  95 <=>  239 - 242   (HIS   93  - PRO   96  <=> VAL  329  - GLY  332 )                          
+   8: 2nrm-A 1a87-A    96 - 105 <=>  245 - 254   (ILE   97  - VAL  106  <=> ILE  335  - PHE  344 )                          
+   8: 2nrm-A 1a87-A   109 - 112 <=>  255 - 258   (VAL  110  - GLU  113  <=> LEU  345  - SER  348 )                          
+   8: 2nrm-A 1a87-A   115 - 137 <=>  259 - 281   (GLY  116  - ALA  138  <=> GLY  349  - ASP  371 )                          
+
+# Translation-rotation matrices
+-matrix  "2nrm-A 2nrm-A  U(1,.)   1.000000  0.000000 -0.000000            0.000000"
+-matrix  "2nrm-A 2nrm-A  U(2,.)  -0.000000  1.000000  0.000000            0.000000"
+-matrix  "2nrm-A 2nrm-A  U(3,.)   0.000000 -0.000000  1.000000           -0.000000"
+-matrix  "2nrm-A 101m-A  U(1,.)  -0.753961  0.567882 -0.330232           27.728849"
+-matrix  "2nrm-A 101m-A  U(2,.)   0.240092 -0.229709 -0.943180            1.541300"
+-matrix  "2nrm-A 101m-A  U(3,.)  -0.611473 -0.790407  0.036848           40.543331"
+-matrix  "2nrm-A 5cnb-A  U(1,.)   0.323572  0.931991  0.163381           20.828289"
+-matrix  "2nrm-A 5cnb-A  U(2,.)   0.292025 -0.262604  0.919653          -24.000477"
+-matrix  "2nrm-A 5cnb-A  U(3,.)   0.900013 -0.249862 -0.357136            2.429118"
+-matrix  "2nrm-A 1a00-A  U(1,.)  -0.199453 -0.972153 -0.123034           75.878906"
+-matrix  "2nrm-A 1a00-A  U(2,.)   0.933573 -0.226670  0.277601          -73.325356"
+-matrix  "2nrm-A 1a00-A  U(3,.)  -0.297759 -0.059493  0.952785           50.438416"
+-matrix  "2nrm-A 1bin-A  U(1,.)   0.021792  0.965027  0.261245          -17.623938"
+-matrix  "2nrm-A 1bin-A  U(2,.)  -0.935878  0.111601 -0.334183           15.861337"
+-matrix  "2nrm-A 1bin-A  U(3,.)  -0.351651 -0.237211  0.905579           13.962627"
+-matrix  "2nrm-A 5ohe-A  U(1,.)   0.481827  0.082026  0.872419            0.316640"
+-matrix  "2nrm-A 5ohe-A  U(2,.)  -0.462587  0.869384  0.173741           20.621643"
+-matrix  "2nrm-A 5ohe-A  U(3,.)  -0.744215 -0.487282  0.456837           45.383579"
+-matrix  "2nrm-A 1all-A  U(1,.)  -0.298534 -0.495655 -0.815600           35.616982"
+-matrix  "2nrm-A 1all-A  U(2,.)  -0.939635  0.302375  0.160176           17.195065"
+-matrix  "2nrm-A 1all-A  U(3,.)   0.167225  0.814184 -0.556004           -9.937306"
+-matrix  "2nrm-A 1a87-A  U(1,.)   0.291130 -0.189306  0.937767          -23.731981"
+-matrix  "2nrm-A 1a87-A  U(2,.)   0.867397 -0.361265 -0.342212           15.293674"
+-matrix  "2nrm-A 1a87-A  U(3,.)   0.403566  0.913045  0.059029          -68.234207"
+

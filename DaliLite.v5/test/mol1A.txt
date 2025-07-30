@@ -1,0 +1,13 @@
+# Job: test
+# Query: mol1A
+# No:  Chain   Z    rmsd lali nres  %id PDB  Description
+   1:  mol2-A  3.6  1.8   33    36   39   MOLECULE: BOVINE PANCREATIC POLYPEPTIDE;                             
+
+# Structural equivalences
+   1: mol1-A mol2-A     1 -  33 <=>    1 -  33   (GLY    1  - ARG   33  <=> ALA    1  - ARG   33 )                          
+
+# Translation-rotation matrices
+-matrix  "mol1-A mol2-A  U(1,.)   0.631906 -0.761372 -0.144939           -0.890845"
+-matrix  "mol1-A mol2-A  U(2,.)   0.512616  0.550832 -0.658642          -10.882093"
+-matrix  "mol1-A mol2-A  U(3,.)   0.581308  0.341902  0.738366            4.946664"
+

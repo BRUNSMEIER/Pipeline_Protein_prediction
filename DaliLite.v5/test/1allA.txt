@@ -1,0 +1,63 @@
+# Job: matrix
+# Query: 1allA
+# No:  Chain   Z    rmsd lali nres  %id PDB  Description
+   1:  1all-A 29.7  0.0  160   160  100   MOLECULE: ALLOPHYCOCYANIN;                                           
+   2:  101m-A  9.0  3.4  121   154   10   MOLECULE: MYOGLOBIN;                                                 
+   3:  1a00-A  8.7  3.5  120   141    8   MOLECULE: HEMOGLOBIN (ALPHA CHAIN);                                  
+   4:  1bin-A  8.1  3.7  116   143    9   MOLECULE: LEGHEMOGLOBIN A;                                           
+   5:  1a87-A  7.4  2.7  107   297    8   MOLECULE: COLICIN N;                                                 
+
+# Structural equivalences
+   1: 1all-A 1all-A     1 - 160 <=>    1 - 160   (SER    3  - SER  174  <=> SER    3  - SER  174 )                          
+   2: 1all-A 101m-A    31 -  46 <=>    4 -  19   (SER   33  - ARG   48  <=> SER    3  - GLU   18 )                          
+   2: 1all-A 101m-A    47 -  65 <=>   23 -  41   (GLU   49  - VAL   67  <=> ALA   22  - LEU   40 )                          
+   2: 1all-A 101m-A    69 -  74 <=>   42 -  47   (GLY   71  - ALA   78  <=> GLU   41  - VAL   46 )                          
+   2: 1all-A 101m-A    75 -  94 <=>   60 -  79   (ASP   79  - GLY   98  <=> GLU   59  - LYS   78 )                          
+   2: 1all-A 101m-A    99 - 102 <=>   80 -  83   (ASP  103  - PRO  106  <=> LYS   79  - HIS   82 )                          
+   2: 1all-A 101m-A   104 - 107 <=>   84 -  87   (GLU  108  - GLY  111  <=> GLU   83  - LEU   86 )                          
+   2: 1all-A 101m-A   109 - 116 <=>   88 -  95   (VAL  113  - LYS  120  <=> LYS   87  - ALA   94 )                          
+   2: 1all-A 101m-A   117 - 139 <=>   97 - 119   (SER  121  - LEU  143  <=> LYS   96  - ARG  118 )                          
+   2: 1all-A 101m-A   140 - 160 <=>  124 - 144   (LEU  144  - SER  174  <=> PHE  123  - ALA  143 )                          
+   3: 1all-A 1a00-A    32 -  65 <=>    7 -  40   (GLY   34  - VAL   67  <=> LYS    7  - LYS   40 )                          
+   3: 1all-A 1a00-A    69 -  76 <=>   41 -  48   (GLY   71  - MET   80  <=> THR   41  - LEU   48 )                          
+   3: 1all-A 1a00-A    78 -  97 <=>   53 -  72   (ALA   82  - ALA  101  <=> ALA   53  - HIS   72 )                          
+   3: 1all-A 1a00-A    98 - 101 <=>   74 -  77   (GLY  102  - THR  105  <=> ASP   74  - PRO   77 )                          
+   3: 1all-A 1a00-A   104 - 116 <=>   80 -  92   (GLU  108  - LYS  120  <=> LEU   80  - ARG   92 )                          
+   3: 1all-A 1a00-A   120 - 139 <=>   93 - 112   (THR  124  - LEU  143  <=> VAL   93  - HIS  112 )                          
+   3: 1all-A 1a00-A   140 - 160 <=>  117 - 137   (LEU  144  - SER  174  <=> PHE  117  - THR  137 )                          
+   4: 1all-A 1bin-A    32 -  47 <=>    4 -  19   (GLY   34  - GLU   49  <=> THR    4  - LYS   19 )                          
+   4: 1all-A 1bin-A    48 -  65 <=>   24 -  41   (ARG   50  - VAL   67  <=> GLN   24  - LYS   41 )                          
+   4: 1all-A 1bin-A    69 -  72 <=>   42 -  45   (GLY   71  - TYR   76  <=> ASP   42  - SER   45 )                          
+   4: 1all-A 1bin-A    73 -  76 <=>   47 -  50   (GLY   77  - MET   80  <=> LEU   47  - GLY   50 )                          
+   4: 1all-A 1bin-A    79 -  99 <=>   57 -  77   (THR   83  - ASP  103  <=> LYS   57  - LYS   77 )                          
+   4: 1all-A 1bin-A   107 - 116 <=>   84 -  93   (GLY  111  - LYS  120  <=> ALA   84  - ALA   93 )                          
+   4: 1all-A 1bin-A   118 - 122 <=>   94 -  98   (LEU  122  - ILE  126  <=> GLN   94  - THR   98 )                          
+   4: 1all-A 1bin-A   123 - 139 <=>  100 - 116   (GLU  127  - LEU  143  <=> PRO  100  - ALA  116 )                          
+   4: 1all-A 1bin-A   140 - 160 <=>  121 - 141   (LEU  144  - SER  174  <=> TRP  121  - LYS  141 )                          
+   5: 1all-A 1a87-A    31 -  42 <=>  169 - 180   (SER   33  - MET   44  <=> ASN  259  - TRP  270 )                          
+   5: 1all-A 1a87-A    44 -  47 <=>  181 - 184   (GLY   46  - GLU   49  <=> LYS  271  - ASN  274 )                          
+   5: 1all-A 1a87-A    50 -  60 <=>  185 - 195   (ILE   52  - LYS   62  <=> ALA  275  - LEU  285 )                          
+   5: 1all-A 1a87-A    62 -  65 <=>  196 - 199   (PRO   64  - VAL   67  <=> GLY  286  - PHE  289 )                          
+   5: 1all-A 1a87-A    77 -  97 <=>  201 - 221   (THR   81  - ALA  101  <=> VAL  291  - THR  311 )                          
+   5: 1all-A 1a87-A   101 - 104 <=>  222 - 225   (THR  105  - GLU  108  <=> GLY  312  - GLY  315 )                          
+   5: 1all-A 1a87-A   106 - 109 <=>  226 - 229   (ILE  110  - VAL  113  <=> PRO  316  - LEU  319 )                          
+   5: 1all-A 1a87-A   114 - 139 <=>  233 - 258   (MET  118  - LEU  143  <=> SER  323  - SER  348 )                          
+   5: 1all-A 1a87-A   140 - 160 <=>  260 - 280   (LEU  144  - SER  174  <=> LEU  350  - ILE  370 )                          
+
+# Translation-rotation matrices
+-matrix  "1all-A 1all-A  U(1,.)   1.000000 -0.000000 -0.000000            0.000000"
+-matrix  "1all-A 1all-A  U(2,.)   0.000000  1.000000  0.000000            0.000000"
+-matrix  "1all-A 1all-A  U(3,.)   0.000000 -0.000000  1.000000            0.000000"
+-matrix  "1all-A 101m-A  U(1,.)  -0.086715 -0.051984  0.994876           24.267876"
+-matrix  "1all-A 101m-A  U(2,.)  -0.038377 -0.997722 -0.055478           39.355862"
+-matrix  "1all-A 101m-A  U(3,.)   0.995494 -0.042992  0.084522          -24.232685"
+-matrix  "1all-A 1a00-A  U(1,.)  -0.916796  0.386724 -0.099648           91.041832"
+-matrix  "1all-A 1a00-A  U(2,.)   0.058059  0.375942  0.924823            8.352467"
+-matrix  "1all-A 1a00-A  U(3,.)   0.395113  0.842088 -0.367115          -76.228851"
+-matrix  "1all-A 1bin-A  U(1,.)   0.843619 -0.332983  0.421224           16.937616"
+-matrix  "1all-A 1bin-A  U(2,.)  -0.522607 -0.689264  0.501794           45.222775"
+-matrix  "1all-A 1bin-A  U(3,.)   0.123246 -0.643457 -0.755495           28.428236"
+-matrix  "1all-A 1a87-A  U(1,.)  -0.783331  0.614892  0.091114            0.264070"
+-matrix  "1all-A 1a87-A  U(2,.)   0.468831  0.680672 -0.562924          -15.679088"
+-matrix  "1all-A 1a87-A  U(3,.)  -0.408156 -0.398239 -0.821471           80.513725"
+

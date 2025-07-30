@@ -1,0 +1,84 @@
+# Job: hierarchical
+# Query: 5oheA
+# No:  Chain   Z    rmsd lali nres  %id PDB  Description
+   1:  5ohe-A 30.8  0.0  152   152  100   MOLECULE: GLOBIN-COUPLED HISTIDINE KINASE;                           
+   2:  1a00-A 13.0  3.0  134   141   16   MOLECULE: HEMOGLOBIN (ALPHA CHAIN);                                  
+   3:  101m-A 12.5  2.8  134   154   12   MOLECULE: MYOGLOBIN;                                                 
+   4:  5cnb-A 12.2  2.9  133   152   14   MOLECULE: MYOGLOBIN;                                                 
+   5:  1bin-A 10.2  3.2  128   143   13   MOLECULE: LEGHEMOGLOBIN A;                                           
+   6:  1all-A 10.0  2.9  118   160   10   MOLECULE: ALLOPHYCOCYANIN;                                           
+   7:  1a87-A  8.1  3.3  121   297    8   MOLECULE: COLICIN N;                                                 
+
+# Structural equivalences
+   1: 5ohe-A 5ohe-A     1 - 152 <=>    1 - 152   (THR    7  - ARG  158  <=> THR    7  - ARG  158 )                          
+   2: 5ohe-A 1a00-A    11 -  44 <=>    1 -  34   (GLY   17  - GLY   50  <=> VAL    1  - LEU   34 )                          
+   2: 5ohe-A 1a00-A    45 -  56 <=>   36 -  47   (HIS   51  - GLU   62  <=> PHE   36  - ASP   47 )                          
+   2: 5ohe-A 1a00-A    57 -  73 <=>   53 -  69   (SER   63  - LEU   79  <=> ALA   53  - ALA   69 )                          
+   2: 5ohe-A 1a00-A    75 -  79 <=>   70 -  74   (GLY   81  - ASP   85  <=> VAL   70  - ASP   74 )                          
+   2: 5ohe-A 1a00-A    81 -  94 <=>   75 -  88   (ALA   87  - VAL  100  <=> ASP   75  - ALA   88 )                          
+   2: 5ohe-A 1a00-A    95 - 122 <=>   90 - 117   (ARG  101  - PHE  128  <=> LYS   90  - PHE  117 )                          
+   2: 5ohe-A 1a00-A   129 - 152 <=>  118 - 141   (LEU  135  - ARG  158  <=> THR  118  - ARG  141 )                          
+   3: 5ohe-A 101m-A    10 -  44 <=>    1 -  35   (VAL   16  - GLY   50  <=> MET    0  - LYS   34 )                          
+   3: 5ohe-A 101m-A    45 -  55 <=>   37 -  47   (HIS   51  - GLY   61  <=> HIS   36  - VAL   46 )                          
+   3: 5ohe-A 101m-A    56 -  74 <=>   59 -  77   (GLU   62  - LEU   80  <=> SER   58  - LEU   76 )                          
+   3: 5ohe-A 101m-A    76 -  80 <=>   78 -  82   (GLY   82  - GLU   86  <=> LYS   77  - HIS   81 )                          
+   3: 5ohe-A 101m-A    82 -  95 <=>   83 -  96   (TYR   88  - ARG  101  <=> HIS   82  - THR   95 )                          
+   3: 5ohe-A 101m-A    96 - 121 <=>   98 - 123   (ILE  102  - ARG  127  <=> HIS   97  - ASN  122 )                          
+   3: 5ohe-A 101m-A   129 - 152 <=>  125 - 148   (LEU  135  - ARG  158  <=> GLY  124  - LYS  147 )                          
+   4: 5ohe-A 5cnb-A    11 -  44 <=>    1 -  34   (GLY   17  - GLY   50  <=> GLY    1  - THR   34 )                          
+   4: 5ohe-A 5cnb-A    45 -  55 <=>   36 -  46   (HIS   51  - GLY   61  <=> HIS   36  - PHE   46 )                          
+   4: 5ohe-A 5cnb-A    56 -  73 <=>   58 -  75   (GLU   62  - LEU   79  <=> SER   58  - ILE   75 )                          
+   4: 5ohe-A 5cnb-A    76 -  80 <=>   77 -  81   (GLY   82  - GLU   86  <=> LYS   77  - HIS   81 )                          
+   4: 5ohe-A 5cnb-A    82 -  95 <=>   82 -  95   (TYR   88  - ARG  101  <=> HIS   82  - THR   95 )                          
+   4: 5ohe-A 5cnb-A    96 - 122 <=>   97 - 123   (ILE  102  - PHE  128  <=> HIS   97  - PHE  123 )                          
+   4: 5ohe-A 5cnb-A   129 - 152 <=>  124 - 147   (LEU  135  - ARG  158  <=> GLY  124  - LYS  147 )                          
+   5: 5ohe-A 1bin-A    10 -  44 <=>    1 -  35   (VAL   16  - GLY   50  <=> VAL    1  - GLU   35 )                          
+   5: 5ohe-A 1bin-A    45 -  52 <=>   37 -  44   (HIS   51  - LEU   58  <=> ALA   37  - PHE   44 )                          
+   5: 5ohe-A 1bin-A    53 -  56 <=>   47 -  50   (VAL   59  - GLU   62  <=> LEU   47  - GLY   50 )                          
+   5: 5ohe-A 1bin-A    60 -  75 <=>   56 -  71   (GLY   66  - GLY   81  <=> PRO   56  - ASP   71 )                          
+   5: 5ohe-A 1bin-A    76 -  79 <=>   73 -  76   (GLY   82  - ASP   85  <=> ALA   73  - LEU   76 )                          
+   5: 5ohe-A 1bin-A    82 -  85 <=>   82 -  85   (TYR   88  - ARG   91  <=> VAL   82  - ASP   85 )                          
+   5: 5ohe-A 1bin-A    87 -  93 <=>   86 -  92   (TYR   93  - HIS   99  <=> ALA   86  - HIS   92 )                          
+   5: 5ohe-A 1bin-A    95 -  98 <=>   93 -  96   (ARG  101  - LEU  104  <=> ALA   93  - ALA   96 )                          
+   5: 5ohe-A 1bin-A    99 - 122 <=>   98 - 121   (PRO  105  - PHE  128  <=> THR   98  - TRP  121 )                          
+   5: 5ohe-A 1bin-A   129 - 150 <=>  122 - 143   (LEU  135  - THR  156  <=> SER  122  - ALA  143 )                          
+   6: 5ohe-A 1all-A    18 -  45 <=>   33 -  60   (ARG   24  - HIS   51  <=> GLU   35  - LYS   62 )                          
+   6: 5ohe-A 1all-A    48 -  53 <=>   61 -  66   (ALA   54  - VAL   59  <=> ARG   63  - SER   68 )                          
+   6: 5ohe-A 1all-A    54 -  76 <=>   72 -  94   (GLY   60  - GLY   82  <=> TYR   76  - GLY   98 )                          
+   6: 5ohe-A 1all-A    77 -  80 <=>   99 - 102   (PRO   83  - GLU   86  <=> ASP  103  - PRO  106 )                          
+   6: 5ohe-A 1all-A    82 -  85 <=>  103 - 106   (TYR   88  - ARG   91  <=> ILE  107  - ILE  110 )                          
+   6: 5ohe-A 1all-A    86 - 119 <=>  108 - 141   (ARG   92  - TYR  125  <=> VAL  112  - SER  145 )                          
+   6: 5ohe-A 1all-A   130 - 148 <=>  142 - 160   (GLU  136  - LEU  154  <=> GLY  146  - SER  174 )                          
+   7: 5ohe-A 1a87-A     1 -   9 <=>  155 - 163   (THR    7  - TYR   15  <=> ALA  245  - ASN  253 )                          
+   7: 5ohe-A 1a87-A    11 -  15 <=>  166 - 170   (GLY   17  - GLY   21  <=> MET  256  - LYS  260 )                          
+   7: 5ohe-A 1a87-A    16 -  27 <=>  172 - 183   (ASP   22  - ALA   33  <=> ASP  262  - VAL  273 )                          
+   7: 5ohe-A 1a87-A    30 -  44 <=>  184 - 198   (HIS   36  - GLY   50  <=> ASN  274  - ALA  288 )                          
+   7: 5ohe-A 1a87-A    59 -  75 <=>  201 - 217   (VAL   65  - GLY   81  <=> VAL  291  - GLU  307 )                          
+   7: 5ohe-A 1a87-A    76 -  79 <=>  219 - 222   (GLY   82  - ASP   85  <=> TYR  309  - GLY  312 )                          
+   7: 5ohe-A 1a87-A    82 - 114 <=>  223 - 255   (TYR   88  - LEU  120  <=> ASN  313  - LEU  345 )                          
+   7: 5ohe-A 1a87-A   117 - 120 <=>  256 - 259   (LEU  123  - GLU  126  <=> PRO  346  - GLY  349 )                          
+   7: 5ohe-A 1a87-A   128 - 149 <=>  260 - 281   (GLU  134  - HIS  155  <=> LEU  350  - ASP  371 )                          
+
+# Translation-rotation matrices
+-matrix  "5ohe-A 5ohe-A  U(1,.)   1.000000  0.000000  0.000000            0.000000"
+-matrix  "5ohe-A 5ohe-A  U(2,.)  -0.000000  1.000000 -0.000000            0.000000"
+-matrix  "5ohe-A 5ohe-A  U(3,.)  -0.000000  0.000000  1.000000            0.000000"
+-matrix  "5ohe-A 1a00-A  U(1,.)  -0.288318 -0.326350 -0.900205           74.827179"
+-matrix  "5ohe-A 1a00-A  U(2,.)   0.944172 -0.253407 -0.210533          -77.662857"
+-matrix  "5ohe-A 1a00-A  U(3,.)  -0.159411 -0.910649  0.381192           52.824547"
+-matrix  "5ohe-A 101m-A  U(1,.)  -0.010718  0.972254  0.233681           25.600285"
+-matrix  "5ohe-A 101m-A  U(2,.)   0.448239  0.213571 -0.868026          -11.800058"
+-matrix  "5ohe-A 101m-A  U(3,.)  -0.893849  0.095441 -0.438091           18.268736"
+-matrix  "5ohe-A 5cnb-A  U(1,.)  -0.640836  0.762469 -0.089278           62.815678"
+-matrix  "5ohe-A 5cnb-A  U(2,.)  -0.165767 -0.023887  0.985876          -15.827806"
+-matrix  "5ohe-A 5cnb-A  U(3,.)   0.749567  0.646584  0.141699           -9.741908"
+-matrix  "5ohe-A 1bin-A  U(1,.)   0.684766  0.616527 -0.388576           16.726353"
+-matrix  "5ohe-A 1bin-A  U(2,.)  -0.616332  0.205405 -0.760226           12.707471"
+-matrix  "5ohe-A 1bin-A  U(3,.)  -0.388884  0.760068  0.520640          -28.627964"
+-matrix  "5ohe-A 1all-A  U(1,.)   0.104790 -0.993714 -0.039384           61.562325"
+-matrix  "5ohe-A 1all-A  U(2,.)  -0.931323 -0.111946  0.346563           25.116446"
+-matrix  "5ohe-A 1all-A  U(3,.)  -0.348793  0.000363 -0.937200            3.744015"
+-matrix  "5ohe-A 1a87-A  U(1,.)  -0.626733 -0.475589  0.617269           67.507835"
+-matrix  "5ohe-A 1a87-A  U(2,.)   0.411830 -0.874638 -0.255741           63.329227"
+-matrix  "5ohe-A 1a87-A  U(3,.)   0.661515  0.093928  0.744027          -66.895981"
+
