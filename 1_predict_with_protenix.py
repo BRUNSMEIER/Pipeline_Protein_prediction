@@ -21,8 +21,8 @@ from pathlib import Path
 PROTENIX      = "protenix"          # 若不在 $PATH，请写绝对路径
 INPUT_DIR     = "input_pdbs"
 PRED_DIR      = "predicted_structures"
-TARGET_FASTA  = "target_without_msa.json"
-REFERENCE_PDB = "reference.pdb"
+TARGET_FASTA  = "7.6.2.14.json"
+REFERENCE_PDB = "7.6.2.14.pdb"
 
 
 def run(cmd: str) -> None:
@@ -61,15 +61,15 @@ def main() -> None:
     # 1) 预测目标 FASTA → reference.pdb
     predict_to_single_pdb(TARGET_FASTA, REFERENCE_PDB)
 
-    # 2) 预测 input_pdbs 中的 8 个结构
-    for fname in sorted(os.listdir(INPUT_DIR)):
-        if not fname.lower().endswith(".pdb"):
-            continue
-        src_path = os.path.join(INPUT_DIR, fname)
-        dst_path = os.path.join(
-            PRED_DIR, f"{Path(fname).stem}_pred.pdb"
-        )
-        predict_to_single_pdb(src_path, dst_path)
+    # # 2) 预测 input_pdbs 中的 8 个结构
+    # for fname in sorted(os.listdir(INPUT_DIR)):
+    #     if not fname.lower().endswith(".pdb"):
+    #         continue
+    #     src_path = os.path.join(INPUT_DIR, fname)
+    #     dst_path = os.path.join(
+    #         PRED_DIR, f"{Path(fname).stem}_pred.pdb"
+    #     )
+    #     predict_to_single_pdb(src_path, dst_path)
 
 
 if __name__ == "__main__":

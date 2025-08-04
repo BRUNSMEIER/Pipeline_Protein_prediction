@@ -1,0 +1,23 @@
+[
+    {
+        "sequences": [
+            {
+                "proteinChain": {
+                    "sequence": "MNATTSAAAYGPLAGADLEAELAQARVADSDARDAAILEHDGSASVVPLARRRTSGTAPDDAVTLSGVSKRFGARTVLDNVELGIARGSFVAIVGRSGCGKSTLLRLVAGLEQPSSGALVTRGEGGGALDTRIMYQDARLLPWKTVLQNVMLGLGRGARDQARAVLDEVGLLERANDWPAQLSGGQRQRVALARALVHRPQLLLLDEPLGALDALTRIEMHALIERLWREHRFTALLVTHDVQEAVALGDRILLIEQGRVALDQAVPLDRPRARASAAFAALEDRVLKRVLAGGPGAADHDAEHEADKVRPVGQIRWAV",
+                    "count": 1,
+                    "msa": {
+                        "precomputed_msa_dir": "E:\\test1\\predicted_structures\\tmp_7.6.2.14\\7.6.2.14\\msa_resmsa_seq_0\\0",
+                        "pairing_db": "uniref100"
+                    }
+                }
+            },
+            {
+                "ligand": {
+                    "ligand": "CCD_ATP",
+                    "count": 1
+                }
+            }
+        ],
+        "name": "7.6.2.14"
+    }
+]

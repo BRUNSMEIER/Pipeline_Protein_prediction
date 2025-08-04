@@ -20,8 +20,8 @@ import gemmi                         # pip install gemmi
 # ── configuration ─────────────────────────────────────────────────────────────
 PROTENIX      = "protenix"           # absolute path if not in $PATH
 PRED_DIR      = "predicted_structures"
-TARGET_JSON   = "target_without_msa.json"
-REFERENCE_PDB = "reference.pdb"
+TARGET_JSON   = "7.6.2.14.json"
+REFERENCE_PDB = "7.6.2.14.pdb"
 
 # ── helper: run shell commands ────────────────────────────────────────────────
 def run(cmd: str) -> None:
