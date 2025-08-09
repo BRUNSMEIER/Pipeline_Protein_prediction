@@ -2,10 +2,11 @@
 """
 1_predict_with_protenix.py
 ———————————————
-在 Protenix 环境中运行：
-    • target.fasta  → reference.pdb
-    • input_pdbs/*  → predicted_structures/<basename>_pred.pdb
-CLI 兼容：
+Run this in the Protenix environment to:
+    • Predict target.fasta → reference.pdb
+    • Predict each file in input_pdbs/ → predicted_structures/<basename>_pred.pdb
+
+CLI-compatible format:
     protenix predict --input <file|dir> --out_dir <dir> …
 """
 
@@ -16,52 +17,54 @@ import shutil
 import subprocess
 from pathlib import Path
 
-
-# === 基本路径 ===
-PROTENIX      = "protenix"          # 若不在 $PATH，请写绝对路径
+# === Basic paths ===
+PROTENIX      = "protenix"          # If not in $PATH, provide full absolute path
 INPUT_DIR     = "input_pdbs"
 PRED_DIR      = "predicted_structures"
 TARGET_FASTA  = "7.6.2.14.json"
 REFERENCE_PDB = "7.6.2.14.pdb"
 
-
 def run(cmd: str) -> None:
-    """执行命令并在失败时抛异常，便于 SLURM 捕获"""
+    """
+    Execute a shell command and raise an exception if it fails.
+    Useful for SLURM job monitoring or fail-fast behavior.
+    """
     print(f"▶ {cmd}", flush=True)
     subprocess.run(cmd, shell=True, check=True)
 
-
 def predict_to_single_pdb(src: str, dst_pdb: str) -> None:
     """
-    调用 protenix 预测并把生成的第一个 PDB 文件移动/重命名到 dst_pdb
-    src      : 输入文件（.fasta / .pdb）
-    dst_pdb  : 期望保存的最终 PDB 路径
+    Call Protenix to perform structure prediction,
+    then move/rename the first predicted PDB file to `dst_pdb`.
+
+    Parameters:
+    - src: Input file (either .fasta or .pdb)
+    - dst_pdb: Path to save the final renamed output PDB
     """
     base   = Path(src).stem
     tmpdir = Path(PRED_DIR) / f"tmp_{base}"
     tmpdir.mkdir(parents=True, exist_ok=True)
 
-    # Protenix 不区分 input 类型的话，可删掉 typ_flag
+    # If Protenix does not require different flags for input types, you can remove any type logic
     run(f"{PROTENIX} predict --input {src} --out_dir {tmpdir} --use_msa_server")
 
-    # 抓第一个生成的 PDB（若你想自定义规则，可修改这里）
+    # Grab the first generated PDB file (you can customize selection logic here)
     pdb_candidates = sorted(glob.glob(str(tmpdir / "*.pdb")))
     if not pdb_candidates:
-        raise RuntimeError(f"[{src}] 预测后未发现 PDB 文件，目录：{tmpdir}")
+        raise RuntimeError(f"[{src}] No PDB file found after prediction. Checked directory: {tmpdir}")
 
     first_pdb = pdb_candidates[0]
     shutil.move(first_pdb, dst_pdb)
-    shutil.rmtree(tmpdir)          # 如想保留临时目录，注释掉此行
+    shutil.rmtree(tmpdir)  # Comment this line if you want to keep the temp directory
     print(f"✓ saved → {dst_pdb}", flush=True)
-
 
 def main() -> None:
     os.makedirs(PRED_DIR, exist_ok=True)
 
-    # 1) 预测目标 FASTA → reference.pdb
+    # 1) Predict structure from target FASTA → reference.pdb
     predict_to_single_pdb(TARGET_FASTA, REFERENCE_PDB)
 
-    # # 2) 预测 input_pdbs 中的 8 个结构
+    # # 2) Predict structures for each file in input_pdbs/
     # for fname in sorted(os.listdir(INPUT_DIR)):
     #     if not fname.lower().endswith(".pdb"):
     #         continue
@@ -70,7 +73,6 @@ def main() -> None:
     #         PRED_DIR, f"{Path(fname).stem}_pred.pdb"
     #     )
     #     predict_to_single_pdb(src_path, dst_path)
-
 
 if __name__ == "__main__":
     try:

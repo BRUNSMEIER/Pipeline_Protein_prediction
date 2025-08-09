@@ -284,67 +284,52 @@ class DaliPipeline:
             print(f"❌ Pipeline failed: {str(e)}")
             return False
 
-def predict_superfamily(input_fasta, hmm_library='/mnt/data2/supfam/supfam/hmmlib', output_tbl='output.tbl', e_value_threshold=0.001):
-    """
-    Predict structural superfamilies using the SUPERFAMILY HMM library based on a FASTA sequence.
-    
-    Returns: True if significant matches found, False otherwise.
-    """
-    model_tab = '/mnt/data2/supfam/supfam/model.tab'
-    id_to_name = {}
-    with open(model_tab, 'r') as f:
-        for line in f:
-            parts = line.strip().split('\t')
-            if len(parts) >= 2:
-                id_to_name[parts[0]] = parts[1]
+def predict_superfamily(input_fasta):
+    import os, shutil, subprocess
 
-    print(f"Starting prediction for file: {input_fasta}")
-    print(f"HMM library: {hmm_library}")
+    superfamily_dir = '/mnt/data2/supfam/supfam/'
+    superfamily_script = os.path.join(superfamily_dir, 'superfamily.pl')
+    fangshun_dir = '/mnt/data2/supfam/fangshun/'
+    results_dir = os.path.join(fangshun_dir, 'supfamresults/')
+    os.makedirs(results_dir, exist_ok=True)
+
+    base_name = os.path.basename(input_fasta).replace('.fa', '')
+    target_fasta = os.path.join(superfamily_dir, f"{base_name}.fa")
+
+    shutil.copy2(input_fasta, target_fasta)
+
+    print(f"\n✅ Running SUPERFAMILY on: {target_fasta}")
     try:
-        result = subprocess.run([
-            '/mnt/data2/supfam/hmmer-3.1b2/src/hmmscan',
-            '--domtblout', output_tbl,
-            '-E', str(e_value_threshold),
-            hmm_library,
-            input_fasta
-        ], check=True, capture_output=True, text=True)
-        print("hmmscan ran successfully. Stdout:", result.stdout)
-        print("Stderr (if any):", result.stderr)
+        subprocess.run(
+            ['perl', superfamily_script, f"{base_name}.fa"],
+            cwd=superfamily_dir,
+            check=True
+        )
+
+        raw_ass = os.path.join(superfamily_dir, '.ass')
+        raw_html = os.path.join(superfamily_dir, '.html')
+        out_ass = os.path.join(superfamily_dir, f"{base_name}.ass")
+        out_html = os.path.join(superfamily_dir, f"{base_name}.html")
+        dest_ass = os.path.join(results_dir, f"{base_name}.ass")
+        dest_html = os.path.join(results_dir, f"{base_name}.html")
+
+        if os.path.exists(raw_ass):
+            shutil.move(raw_ass, out_ass)
+            shutil.copy2(out_ass, dest_ass)
+        if os.path.exists(raw_html):
+            shutil.move(raw_html, out_html)
+            shutil.copy2(out_html, dest_html)
+
+        print(f"✅ Output saved as: {out_ass}, {out_html}")
+        print(f"📁 Copied to results folder: {dest_ass}, {dest_html}")
+        return True
+
     except subprocess.CalledProcessError as e:
-        print(f"Error running hmmscan: {e.stderr}")
-        return False
-    except FileNotFoundError as fnf:
-        print(f"Command not found: {fnf}")
-        return False
+        print(f"❌ Error running SUPERFAMILY: {e}")
+    except FileNotFoundError:
+        print("❌ superfamily.pl not found or not executable.")
+    return False
 
-    print("Parsing output file...")
-    has_significant_matches = False
-    try:
-        queries = list(SearchIO.parse(output_tbl, 'hmmscan3-domtab'))
-        if not queries:
-            print("No queries found in output.")
-        
-        for query in SearchIO.parse(output_tbl, 'hmmscan3-domtab'):
-            print(f"\nQuery sequence: {query.id}")
-            if not query.hits:
-                print("No significant superfamily matches found.")
-                continue
-            
-            for hit in query.hits:
-                for hsp in hit.hsps:
-                    if hsp.evalue < e_value_threshold:
-                        has_significant_matches = True
-                        superfamily_id = hit.id
-                        superfamily_name = id_to_name.get(superfamily_id, 'Unknown')
-                        print(f" - Superfamily ID: {superfamily_id}")
-                        print(f" - Superfamily Name: {superfamily_name}")
-                        print(f"   E-value: {hsp.evalue}")
-                        print(f"   Bit score: {hsp.bitscore}")
-                        print(f"   Domain boundaries: {hsp.query_start}-{hsp.query_end}")
-    except Exception as e:
-        print(f"Error parsing output: {e}")
-    
-    return has_significant_matches
 
 def main():
     parser = argparse.ArgumentParser(description='Integrated SUPERFAMILY and DALI Pipeline')
