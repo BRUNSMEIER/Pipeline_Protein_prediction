@@ -117,3 +117,18 @@ python pymol1.py         # Only render PyMOL visualisations
 ## Notes
 - All outputs from this repository correspond directly to figures, tables, and results in the thesis.
 - Large multi-chain inputs (**>10 chains**) may cause Protenix runtime errors due to memory constraints; see thesis Methodology for mitigation strategies.
+# Let's append the new "src_gadget" description section to the README content.
+
+extra_section = """
+---
+
+## `src_gadget` Directory
+
+This folder contains various format conversion scripts and legacy test files.
+They are **not** part of the main automated pipeline, but can be run individually if needed.
+
+To use them:
+1. Copy or move the desired script from `src_gadget/` into the working directory.
+2. Run with:
+```bash
+python <script_name>.py
