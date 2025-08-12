@@ -11,7 +11,7 @@ Workflow:
    - If no PDB, convert the first CIF to PDB using gemmi.
 
 Usage:
-    python integrated_predict.py [--fasta target.fasta] [--json target_without_msa.json] [--out reference.pdb]
+    python prep.py [--fasta target.fasta] [--json target_without_msa.json] [--out reference.pdb]
 """
 
 import argparse

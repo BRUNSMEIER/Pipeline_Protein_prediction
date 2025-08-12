@@ -293,7 +293,7 @@ def predict_superfamily(input_fasta):
     results_dir = os.path.join(fangshun_dir, 'supfamresults/')
     os.makedirs(results_dir, exist_ok=True)
 
-    base_name = os.path.basename(input_fasta).replace('.fa', '')
+    base_name = Path(input_fasta).stem
     target_fasta = os.path.join(superfamily_dir, f"{base_name}.fa")
 
     shutil.copy2(input_fasta, target_fasta)
@@ -362,13 +362,17 @@ def main():
     
     # Run SUPERFAMILY prediction on known FASTA
     supfam_output_tbl = 'supfam_output.tbl'
-    has_results = predict_superfamily(str(ref_fasta_path), output_tbl=supfam_output_tbl)
+    has_results = predict_superfamily(str(ref_fasta_path))
     
-    if has_results:
-        print("✅ SUPERFAMILY prediction found significant matches. Skipping DALI.")
+    supfam_results_dir = Path("/mnt/data2/supfam/fangshun/supfamresults/")
+    base_name = Path(ref_fasta_path).stem  # "target.fasta" -> "target"
+    supfam_html = supfam_results_dir / f"{base_name}.html"
+
+    if supfam_html.exists():
+        print(f"📝 Found SUPERFAMILY HTML: {supfam_html}. Skipping DALI.")
         sys.exit(0)
     else:
-        print("⚠️ No significant SUPERFAMILY matches. Proceeding to DALI pipeline.")
+        print(f"❌ SUPERFAMILY HTML not found: {supfam_html}. Proceeding to DALI.")
         if args.skip_import:
             print("⏭️ Skipping import step")
             success = pipeline.run_all_comparisons() and pipeline.extract_zscores()
