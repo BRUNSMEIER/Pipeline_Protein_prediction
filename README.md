@@ -117,9 +117,7 @@ python pymol1.py         # Only render PyMOL visualisations
 ## Notes
 - All outputs from this repository correspond directly to figures, tables, and results in the thesis.
 - Large multi-chain inputs (**>10 chains**) may cause Protenix runtime errors due to memory constraints; see thesis Methodology for mitigation strategies.
-# Let's append the new "src_gadget" description section to the README content.
 
-extra_section = """
 ---
 
 ## `src_gadget` Directory
@@ -132,3 +130,13 @@ To use them:
 2. Run with:
 ```bash
 python <script_name>.py
+```
+3. Follow the specific input/output format described in the comments at the beginning of each script.
+
+### Script Notes:
+- **`convert.py`** & **`cif2pdb.py`** — Both convert `.mmCIF` files into `.pdb` format.
+- **`prep.py`** — Alternative version of `predictcif.py` for running Protenix directly.
+- **`supfampred.py`** — Generates `.tbl` format reports from SUPFAM classification output.  
+  These `.tbl` files are retained in this folder due to their low human readability.
+
+---
