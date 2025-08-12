@@ -6,10 +6,10 @@ The pipeline integrates **sequence-to-structure prediction**, **structural forma
 > **Environment note**: Due to virtual-environment differences on the school server, **Protenix and PyMOL are *not* executed by `pipeline.py`**.  
 > `pipeline.py` runs **SUPFAM prediction** and **DaliLite alignment** only. Protenix and optional PyMOL rendering are executed in a separate environment, and their outputs are then consumed by the server-side pipeline.
 
-All server-side scripts are configured to run under:
+All server-side scripts are configured to run under:(this student's name refers to my real name, this notation is only for privacy protection)
 
 ```
-/mnt/data2/supfam/<Your_Name>/
+/mnt/data2/supfam/<this student's name>/
 ```
 
 Paths, variables, and parameters are **pre-configured** for this location. For server-side steps, you can simply run:
