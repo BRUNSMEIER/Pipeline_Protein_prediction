@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-integrated_predict.py
+prep.py(integrated_predict)
 ---------------------
 Convert FASTA to JSON if necessary, then run Protenix to predict structure and save as reference.pdb.
 

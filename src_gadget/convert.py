@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-make_reference_pdb.py
+convert.py
 ———————————————
 • Run after Protenix prediction is completed
 • Converts predicted_structures/**.cif → reference.pdb
