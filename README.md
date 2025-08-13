@@ -28,7 +28,7 @@ The outputs reproduce the results used in the thesis.
 Stage A — Structure Prediction (Protenix/PyMOL environment, off-server)
   FASTA → JSON (e.g., fasta2json.py)
       → Protenix → mmCIF (.cif)  (predictcif.py)
-      → mmCIF → PDB (.pdb)       (convert.py)
+      → mmCIF → PDB (.pdb)       (also contained in predictcif.py)
 
 Stage B — Classification & Alignment (UCL server)
   SUPFAM → .tbl + HTML report   (pipeline.py / supfamhtml.py)
@@ -78,8 +78,7 @@ Automates PyMOL visualisations (not part of `pipeline.py` on the server):
 - **`target.fasta`**, **`target.json`**, **`target.pdb`** — Example inputs.
 - **`*.pdb`, `*.json`, `*.fa`** — Example files used during testing.
 - **`htmlreport/`** — Output HTML reports from SUPFAM.
-- **`visualisation/`** — PyMOL-rendered structural images displayed in final report.
-- **`Structures/`** — Default PyMOL-rendered structural images and pdb alignment models, which are unprocessed and generated automatically, alignment structure might be unclear.
+- **`Structures/`** — PyMOL-rendered structural images and pdb alignment models
 - **`predicted_structures/`** — Protenix-generated models.
 - **`input_pdbs/`** — Structures submitted to DaliLite.
 - **`fasta/`** — Sequence files for batch processing.
@@ -91,7 +90,7 @@ Automates PyMOL visualisations (not part of `pipeline.py` on the server):
 ### Stage A — Structure Prediction (Protenix/PyMOL environment)
 ```bash
 python predictcif.py          # Generate .mmCIF from sequences
-python convert.py             #  → Convert .cif to .pdb
+
 ```
 Automatically generate the resulting `.pdb` files into the server directory:
 ```
@@ -138,13 +137,13 @@ python <script_name>.py
 3. Follow the specific input/output format described in the comments at the beginning of each script.
 
 ### Script Notes:
-- **`convert.py`** & **`cif2pdb.py`** — Both convert `.mmCIF` files into `.pdb` format, the latter one cif2pdb.py is specifically used to convert the 12 types of mmcif files used for comparison into pdb format files.
+- **`convert.py`** & **`cif2pdb.py`** — Both convert `.mmCIF` files into `.pdb` format, the latter one cif2pdb.py is specifically used to convert the 12 types of mmcif files used for comparison into pdb format files. Note that predictcif.py already contains the function for converting mmcifs into PDB, so these two scripts are just for testing.
 - **`prep.py`** — Alternative version of `predictcif.py` for running Protenix directly.
 - **`supfampred.py`** — Generates `.tbl` format reports from SUPFAM classification output.  
   This python file is retained here in this folder due to tbl results' low human readability.
 - **`extractzscore.py`** — Extract Z-scores from DALI output TXT files and generate CSV
 - **`fasta2json.py`** — Convert the raw input of FASTA sequences into json format, which is required by PROTENIX. Usage:
-    python fasta2json.py <input.fasta> 
+    python fasta2json.py <input.fasta>  for example: python fasta2json.py target.fasta
 
 ---
 
