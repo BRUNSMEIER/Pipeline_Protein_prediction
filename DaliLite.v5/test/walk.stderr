@@ -1,206 +1,0 @@
-# sub dalicon(dalicon_input,T,/home/luholm/DaliLite.v5/bin/serialcompare,../DAT/,../DAT/,0)
-# /home/luholm/DaliLite.v5/bin/serialcompare ../DAT/ ../DAT/ DALICON T < dalicon_input > /dev/null
-# cat fort.1[0-9][0-9] > dp_input ; rm fort.* ; /home/luholm/DaliLite.v5/bin/serialcompare ../DAT/ ../DAT/ DP < dp_input > /dev/null
-# cd1=5cnbA zself=31.6 zcutoff=5.62138772902208
-Initial 5cnbA zcutoff is 5.62138772902208
-# dat2fasta: ../DAT/ 0 inputs
-Use of uninitialized value within %seen in numeric lt (<) at ../bin/dali.pl line 637, <IN> line 4.
-# dat2fasta returns 0
-# run_BLAST /usr/local/bin/blastp -db pdb.blast -num_threads 32 -outfmt '6 qseqid sseqid pident length qlen slen bitscore evalue' -max_target_seqs 2000 -evalue 0.01 
->5cnbA   MYOGLOBIN
-GLSDGEWQQVLNVWGKVEADIAGHGQEVLIRLFTGHPETLEKFDKFKHLKTEAEMKASEDLKKHGTVVLTALGGILKKKGHHEAELKPLAQSHATKHKIPIKYLEFISDAIIHVLHSKHPGDFGADAQGAMTKALELFRNDIAAKYKELGFQ
-
-# run_BLAST: 5cnbA	5cnbA	100.000	152	152	152	305	2.11e-112
- 5cnbA	101mA	86.755	151	152	154	270	1.03e-98
- 5cnbA	2nrmA	44.218	147	152	146	113	7.65e-37
- 5cnbA	1a00A	25.342	146	152	141	43.9	4.49e-10
-
-# run_BLAST returned 4:
-5cnbA 101mA 2nrmA 1a00A
-# sub wolf(WOLF,/home/luholm/DaliLite.v5/bin/serialcompare,../DAT/,../DAT/,0)
-wolf: /home/luholm/DaliLite.v5/bin/serialcompare ../DAT/ ../DAT/ WOLF > /dev/null ; cat fort.1[0-9][0-9] > wolf_output ; rm fort.1[0-9][0-9] ; /home/luholm/DaliLite.v5/bin/serialcompare ../DAT/ ../DAT/ DP < wolf_output > /dev/null ; cat fort.1[0-9][0-9] | perl /home/luholm/DaliLite.v5/bin/dccp2dalicon.pl > dalicon_input ; rm -f fort.1[0-9][0-9] 
-# sub dalicon(dalicon_input,T,/home/luholm/DaliLite.v5/bin/serialcompare,../DAT/,../DAT/,0)
-# /home/luholm/DaliLite.v5/bin/serialcompare ../DAT/ ../DAT/ DALICON T < dalicon_input > /dev/null
-# cat fort.1[0-9][0-9] > dp_input ; rm fort.* ; /home/luholm/DaliLite.v5/bin/serialcompare ../DAT/ ../DAT/ DP < dp_input > /dev/null
-rm -f fort.* ; /home/luholm/DaliLite.v5/bin/serialcompare ../DAT/ ../DAT/ PARSI > /dev/null
-cat fort.1[0-9][0-9] > filter_input ; rm -f fort.*; /home/luholm/DaliLite.v5/bin/serialcompare ../DAT/ ../DAT/ FILTER95 < filter_input 
-sort -nr fort.1[0-9][0-9] | uniq | perl /home/luholm/DaliLite.v5/bin/pipe96-free.pl 1.0 2 > dalicon_input ; rm -f fort.* 
-# sub dalicon(dalicon_input,T,/home/luholm/DaliLite.v5/bin/serialcompare,../DAT/,../DAT/,0)
-# /home/luholm/DaliLite.v5/bin/serialcompare ../DAT/ ../DAT/ DALICON T < dalicon_input > /dev/null
-# cat fort.1[0-9][0-9] > dp_input ; rm fort.* ; /home/luholm/DaliLite.v5/bin/serialcompare ../DAT/ ../DAT/ DP < dp_input > /dev/null
-# sub wolf(WOLF,/home/luholm/DaliLite.v5/bin/serialcompare,../DAT/,../DAT/,2)
-wolf: /home/luholm/DaliLite.v5/bin/serialcompare ../DAT/ ../DAT/ WOLF > /dev/null ; cat fort.1[0-9][0-9] > wolf_output ; rm fort.1[0-9][0-9] ; /home/luholm/DaliLite.v5/bin/serialcompare ../DAT/ ../DAT/ DP < wolf_output > /dev/null ; cat fort.1[0-9][0-9] | perl /home/luholm/DaliLite.v5/bin/dccp2dalicon.pl > dalicon_input ; rm -f fort.1[0-9][0-9] 
-# sub dalicon(dalicon_input,T,/home/luholm/DaliLite.v5/bin/serialcompare,../DAT/,../DAT/,2)
-# /home/luholm/DaliLite.v5/bin/serialcompare ../DAT/ ../DAT/ DALICON T < dalicon_input > /dev/null
-# cat fort.1[0-9][0-9] > dp_input ; rm fort.* ; /home/luholm/DaliLite.v5/bin/serialcompare ../DAT/ ../DAT/ DP < dp_input > /dev/null
-rm -f fort.* ; /home/luholm/DaliLite.v5/bin/serialcompare ../DAT/ ../DAT/ PARSI > /dev/null
-cat fort.1[0-9][0-9] > filter_input ; rm -f fort.*; /home/luholm/DaliLite.v5/bin/serialcompare ../DAT/ ../DAT/ FILTER95 < filter_input 
-sort -nr fort.1[0-9][0-9] | uniq | perl /home/luholm/DaliLite.v5/bin/pipe96-free.pl 1.0 2 > dalicon_input ; rm -f fort.* 
-# sub dalicon(dalicon_input,T,/home/luholm/DaliLite.v5/bin/serialcompare,../DAT/,../DAT/,2)
-# /home/luholm/DaliLite.v5/bin/serialcompare ../DAT/ ../DAT/ DALICON T < dalicon_input > /dev/null
-# cat fort.1[0-9][0-9] > dp_input ; rm fort.* ; /home/luholm/DaliLite.v5/bin/serialcompare ../DAT/ ../DAT/ DP < dp_input > /dev/null
-# got 3 hits from query-BLAST
-# sub wolf(WOLF,/home/luholm/DaliLite.v5/bin/serialcompare,../DAT/,../DAT/,0)
-wolf: /home/luholm/DaliLite.v5/bin/serialcompare ../DAT/ ../DAT/ WOLF > /dev/null ; cat fort.1[0-9][0-9] > wolf_output ; rm fort.1[0-9][0-9] ; /home/luholm/DaliLite.v5/bin/serialcompare ../DAT/ ../DAT/ DP < wolf_output > /dev/null ; cat fort.1[0-9][0-9] | perl /home/luholm/DaliLite.v5/bin/dccp2dalicon.pl > dalicon_input ; rm -f fort.1[0-9][0-9] 
-# sub dalicon(dalicon_input,T,/home/luholm/DaliLite.v5/bin/serialcompare,../DAT/,../DAT/,0)
-# /home/luholm/DaliLite.v5/bin/serialcompare ../DAT/ ../DAT/ DALICON T < dalicon_input > /dev/null
-# cat fort.1[0-9][0-9] > dp_input ; rm fort.* ; /home/luholm/DaliLite.v5/bin/serialcompare ../DAT/ ../DAT/ DP < dp_input > /dev/null
-# 6 PDB25 hits above zcutoff=5.62138772902208
-# This is walk(5cnbA,5cnbA.dccp,5.62138772902208,../DAT/,../DAT/,/home/luholm/DaliLite.v5/bin/serialcompare,10000,10000,HASH(0x142f910),100)
-curl --form cd1=5cnbA --form zcutoff=5.62138772902208 http://ekhidna2.biocenter.helsinki.fi/cgi-bin/sans/FSSP.cgi
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0   255    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0104  2097    0  1842  127   255   7137    988 --:--:-- --:--:-- --:--:--  7223104  2097    0  1842  127   255   7094    982 --:--:-- --:--:-- --:--:--  7195
-curl --form cd1=1allA --form zcutoff=5.62138772902208 http://ekhidna2.biocenter.helsinki.fi/cgi-bin/sans/FSSP.cgi
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0   255    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0127   255    0     0  127   255      0    252  0:00:01  0:00:01 --:--:--   253100 58389    0 58134  127   255  43298    189  0:00:01  0:00:01 --:--:-- 43383
-curl --form cd1=2nrmA --form zcutoff=5.62138772902208 http://ekhidna2.biocenter.helsinki.fi/cgi-bin/sans/FSSP.cgi
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0   255    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0127   255    0     0  127   255      0    253  0:00:01  0:00:01 --:--:--   253100 16466    0 16211  127   255   8216    129  0:00:01  0:00:01 --:--:--  8228100 42071    0 41816  127   255  21162    129  0:00:01  0:00:01 --:--:-- 21194
-curl --form cd1=101mA --form zcutoff=5.62138772902208 http://ekhidna2.biocenter.helsinki.fi/cgi-bin/sans/FSSP.cgi
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0   255    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 15469    0 15214  127   255  24779    415 --:--:-- --:--:-- --:--:-- 24859100 15469    0 15214  127   255  24688    413 --:--:-- --:--:-- --:--:-- 24778
-curl --form cd1=1a00A --form zcutoff=5.62138772902208 http://ekhidna2.biocenter.helsinki.fi/cgi-bin/sans/FSSP.cgi
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0   255    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0101  2744    0  2489  127   255  13419   1374 --:--:-- --:--:-- --:--:-- 13675
-curl --form cd1=1binA --form zcutoff=5.62138772902208 http://ekhidna2.biocenter.helsinki.fi/cgi-bin/sans/FSSP.cgi
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0   255    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 16466    0 16211  127   255  16935    266 --:--:-- --:--:-- --:--:-- 16957100 33537    0 33282  127   255  34697    265 --:--:-- --:--:-- --:--:-- 34741
-# calling cd1=5cnbA zcutoff=5.62138772902208 run_dalicon with list: 1aziA 1emyA 1mniA 1tes 1mym 101m 2mbw 1mti 2mgk 1mtk 1mtj 2mgl 2mgm 1lhsA 2zstA 3henA 2w6wA 3ecxA 5c6yA 3e5oA 4pq6A 3qm7A 1mnhA 3e55A 2g0sA 3rjnB 4h0bA 3qm9A 3e5iA 3ed9A 2o5sX 3eczA 5cnfA 4it8A 1mlrA 1mllA 3m3aA 5cngA 3hc9A 4pqbA 2zszA 3lr7A 3u3eA 3wfuA 2zsnA 1pmbA 3nmlA 2zt4A 3aseA 5cn9A 2zt1A 2o5oX 3rj6A 4dc8A 1u7rA 2ekuA 5azrA 2zsxA 3qmaA 5cn4A 3heoA 3eclA 1dxdA 2zt3A 2nx0A 4pnjA 2zt0A 5cncA 3v2vA 4h07A 2nrlA 2zsrA 1mcyA 2v1fA 5cneA 3a2gA 2zspA 3edbA 3hepA 3rj6B 1mlnA 1mlqA 1mlsA 3qm5A 1gjnA 2w6xA 2o5lX 5cmvA 3vauA 4ns2A 1mlkA 5cndA 3o89A 1mlhA 1mnjA 1mlfA 2zsyA 4of9A 4nxcA 1pmbB 1u7sA
-# This is run_dalicon cd1=5cnbA zcutoff=5.62138772902208
-# sub dalicon(tmp.dalicon,T,/home/luholm/DaliLite.v5/bin/serialcompare,../DAT/,../DAT/,0)
-# /home/luholm/DaliLite.v5/bin/serialcompare ../DAT/ ../DAT/ DALICON T < tmp.dalicon > /dev/null
-# cat fort.1[0-9][0-9] > dp_input ; rm fort.* ; /home/luholm/DaliLite.v5/bin/serialcompare ../DAT/ ../DAT/ DP < dp_input > /dev/null
-cat: fort.1[0-9][0-9]: No such file or directory
-rm: cannot remove `fort.*': No such file or directory
-# 6 PDB25 hits above zcutoff=5.62138772902208
-# iteration 1: 20 hits returned
-# calling cd1=5cnbA zcutoff=5.62138772902208 run_dalicon with list: 2in4A 3obdA 3qm6A 2zsoA 3h57A 4dc7A 2w6yA 1mlgA 1cq2A 2vm0A 1mytA 4qauA 5cn5A 3qm8A 2zsqA 2v1gA 1mboA 1mloA 3h58A 3ockA 2zssA 3edaA 2g0rA 4lpiA 3v2zA 1mlmA 4nxaA 4oodA 2zt2A 5cn8A 1dxcA 3e4nA 1mz0A 2v1eA 2ektA 2o5tX 2o58X 1mljA 2mm1 3wftA 2vlxA 2vlzA 1mnjB 3lr9A 4pqcA 2o5qX 2vlyA 1mnkA 2o5mX 1mnkB 3rgkA 4mxkA 2oh9A 3ogbA 2o5bX 5azqA 4fwxA 3wi8A 3m39A 1lhs 4fwyA 3m38A 4fwzA 1lht 5havA 1lhtA 4tyxA 3mn0A 3k9zA 3sdnA 3m3bA 4mxlA 2blhA 1jebA 1a4fB 5jnzA 2dc3A 1a00C 1gcvC 4hhbA 1hbrB 1gcwC 1cg5A 2pghD 1a00B 1thbA 1duoA 1dtiA 1a00D 1o1pA 1mbsA 1hdsD 1x3kA 2yrsK 2yrsD 2yrsB 4b4yA 2yrsO 2yrsM 2yrsC 2yrsI
-# This is run_dalicon cd1=5cnbA zcutoff=5.62138772902208
-# sub dalicon(tmp.dalicon,T,/home/luholm/DaliLite.v5/bin/serialcompare,../DAT/,../DAT/,0)
-# /home/luholm/DaliLite.v5/bin/serialcompare ../DAT/ ../DAT/ DALICON T < tmp.dalicon > /dev/null
-# cat fort.1[0-9][0-9] > dp_input ; rm fort.* ; /home/luholm/DaliLite.v5/bin/serialcompare ../DAT/ ../DAT/ DP < dp_input > /dev/null
-cat: fort.1[0-9][0-9]: No such file or directory
-rm: cannot remove `fort.*': No such file or directory
-# 6 PDB25 hits above zcutoff=5.62138772902208
-# iteration 2: 20 hits returned
-# calling cd1=5cnbA zcutoff=5.62138772902208 run_dalicon with list: 2yrsA 3s1iA 2wy4A 3sdhA 2gdm 3qqqB 1fslB 1c40A 2lh7 1gdiA 2gdmA 3qqrA 2lh2 1ch5A 1myhA 2lh3 1jf3A 1fhjB 1nz4A 1v75A 1bz6A 3zhwB 3zhwA 1mwcA 2lh5 3qqqA 1binB 3qqrB 1gvhA 1emy 1gdjA 1wmuA 2lh6 2pghB 1g09D 1umoA 1s5xA 1ouuD 1g0aB 2vhbA 1outA 4vhbA 5ohfB 5oheB 5ohfE 5oheC 2fal 5oheG 5oheE 5ohfF 5ohfA 5ohfD 5oheD 5ohfH 5oheA 1vrfA 5oheH 1flp 5oheF 5ohfG 5ohfC 1nwnA 1jzmA 4aveA 4f69A 4f68A 4avdA 2xkhA 2xkiA 2vyyA 2xkgA 3zjhB 4fh6A 1ewaA 2bnlC 1allA 1idrA 3vm9B 3wyoD 3vm9A 3wyoA 3wyoC 3wyoB 4nk2A 1ux8A 3wfxA 5o1lA 3wfwA 5o1mB 1o20A 1xq5D 1a4fA 1on7B 1lh7 1hdsA 2mhbA 1qpwB 2vjhC 12e8P 2d2mD 1gh0T
-# This is run_dalicon cd1=5cnbA zcutoff=5.62138772902208
-# sub dalicon(tmp.dalicon,T,/home/luholm/DaliLite.v5/bin/serialcompare,../DAT/,../DAT/,0)
-# /home/luholm/DaliLite.v5/bin/serialcompare ../DAT/ ../DAT/ DALICON T < tmp.dalicon > /dev/null
-# cat fort.1[0-9][0-9] > dp_input ; rm fort.* ; /home/luholm/DaliLite.v5/bin/serialcompare ../DAT/ ../DAT/ DP < dp_input > /dev/null
-# 7 PDB25 hits above zcutoff=5.62138772902208
-# iteration 3: 20 hits returned
-curl --form cd1=1allA --form zcutoff=5.62138772902208 http://ekhidna2.biocenter.helsinki.fi/cgi-bin/sans/FSSP.cgi
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0   255    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 58389    0 58134  127   255   717k   3221 --:--:-- --:--:-- --:--:--  746k
-curl --form cd1=5oheA --form zcutoff=5.62138772902208 http://ekhidna2.biocenter.helsinki.fi/cgi-bin/sans/FSSP.cgi
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0   255    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  4720    0  4465  127   255  37533   2143 --:--:-- --:--:-- --:--:-- 38491
-# calling cd1=5cnbA zcutoff=5.62138772902208 run_dalicon with list: 4uiqA 5ksiB 5lfgA 4hrrA 1yhuU 5lfgB 2zfoD 1hlbA 1xq5D 1a4fA 1on7B 1lh7 2mhbA 1qpwB 2vjhC 12e8P 1gh0T 1kfrA 1b33C 1v4wA 1hbrA 2uunB 3jbbI 1hdaD 1qgwC 1b8dB 3ztaA 2vmlJ 2vmlF 1i7yA 1iwhB 2uulE 1t1nB 2uunF 4po5E 1gh0E 1g0bB 1uc3A 1cpcB 1b8dL 2uulD 1ns9A 2v8aA 1dxtD 1hdaB 1phnB 1ithA 1gcvD 1hbhA 4xxiA 1f99B 1bz1A 2vjrA 1wmuB 4xxkA 4rmpA 2uumD 4xxiB 2uunC 4f0uC 1or4A 1b33J 2uumE 1outB 1gh0N 1oj6B 4xxkB 1gh0X 1hdsB 1on7A 1spgA 1cg8A 1eyxB 1gh0B 2vmlB 1gcvA 1nz3A 2vmlK 1ns9B 2uulC 4zvbA 2vmlE 1b33A 3jbbE 1hdaA 4po5C 2vmlG 2uulB 1d8uA 2vjhB 1c7dA 1ch1A 1jebD 2vjtB 1b33M 1cpcA 1f99A 1hbrD 2uunD 1liaB 1babA
-# This is run_dalicon cd1=5cnbA zcutoff=5.62138772902208
-# sub dalicon(tmp.dalicon,T,/home/luholm/DaliLite.v5/bin/serialcompare,../DAT/,../DAT/,0)
-# /home/luholm/DaliLite.v5/bin/serialcompare ../DAT/ ../DAT/ DALICON T < tmp.dalicon > /dev/null
-# cat fort.1[0-9][0-9] > dp_input ; rm fort.* ; /home/luholm/DaliLite.v5/bin/serialcompare ../DAT/ ../DAT/ DP < dp_input > /dev/null
-cat: fort.1[0-9][0-9]: No such file or directory
-rm: cannot remove `fort.*': No such file or directory
-# 7 PDB25 hits above zcutoff=5.62138772902208
-# iteration 4: 22 hits returned
-# calling cd1=5cnbA zcutoff=5.62138772902208 run_dalicon with list: 2vmlH 2uumA 2pghA 4f0uE 1gh0C 1g08A 1a9wF 1cg5B 1gcwA 1jw8A 1i3eA 1spgB 1kn1A 1gh0F 1qgwD 1la6A 2vmlA 1qpwA 4f0uA 1gcvB 1xq5A 1it2A 1yhuN 1ktpA 1liaL 1ouuB 1phnA 2vmlL 2uumC 1liaA 2vywA 1it3A 1gh0A 1allB 1eyxL 2vjhD 2vmlC 1b33L 1v4xA 2vmlD 1cg8B 4po5A 2uunA 1a9wE 2uulA 2vjtA 1f99L 1i7yB 1b33E 1b8dA 1ouuA 2vmlI 3jbbK 2vjhA 3jbbG 1ux9A 1gh0D 1cpcL 2vjrB 1b33H 3jbbA 2mhbB 2dhbA 1dxtB 2w31A 1ha7A 2c0kA 1i3dA 3lhbA 1hbhD 1ch4A 2uunE 4bjaA 3jbbC 1ktpB 1h97A 1hdsA 1mbs 1b33F 3fewX 1eyxA 1rtxA 1a87 1abwA 1sctH 1v07A 1a87A 1kr7A 1cqxA 1fslA 1jzlA 1tu9A 3qzxA 2qrwA 1ew6A 2d2mD 1ngkB 1ash 3qzzA 7hbiA 1dm1A
-# This is run_dalicon cd1=5cnbA zcutoff=5.62138772902208
-# sub dalicon(tmp.dalicon,T,/home/luholm/DaliLite.v5/bin/serialcompare,../DAT/,../DAT/,0)
-# /home/luholm/DaliLite.v5/bin/serialcompare ../DAT/ ../DAT/ DALICON T < tmp.dalicon > /dev/null
-# cat fort.1[0-9][0-9] > dp_input ; rm fort.* ; /home/luholm/DaliLite.v5/bin/serialcompare ../DAT/ ../DAT/ DP < dp_input > /dev/null
-# 8 PDB25 hits above zcutoff=5.62138772902208
-# iteration 5: 22 hits returned
-curl --form cd1=1a87A --form zcutoff=5.62138772902208 http://ekhidna2.biocenter.helsinki.fi/cgi-bin/sans/FSSP.cgi
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0   255    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 11771    0 11516  127   255  25389    562 --:--:-- --:--:-- --:--:-- 25534
-# calling cd1=5cnbA zcutoff=5.62138772902208 run_dalicon with list: 2vj4A 1uvyA 3f2eA 1sctA 1eca 1dlyA 1mwbA 3zjrA 1xkpA 3mvcA 1x9fA 4xdiA 2vixB 4c0eB 3fblA 8imi0 8ka0C 8ka2A 6thkA 8ka1E 2i88A 1colB 1a87 1cii 1rh1A 8j1wA 8ka0E 1colA 8k9zA 8ka1C 3fewX 8ka1G 8k9zC 4c0eA 1hbgA 8j2wA 8ka1A 8ka2B 8ka0G
-# This is run_dalicon cd1=5cnbA zcutoff=5.62138772902208
-# sub dalicon(tmp.dalicon,T,/home/luholm/DaliLite.v5/bin/serialcompare,../DAT/,../DAT/,0)
-# /home/luholm/DaliLite.v5/bin/serialcompare ../DAT/ ../DAT/ DALICON T < tmp.dalicon > /dev/null
-# cat fort.1[0-9][0-9] > dp_input ; rm fort.* ; /home/luholm/DaliLite.v5/bin/serialcompare ../DAT/ ../DAT/ DP < dp_input > /dev/null
-cat: fort.1[0-9][0-9]: No such file or directory
-rm: cannot remove `fort.*': No such file or directory
-# 8 PDB25 hits above zcutoff=5.62138772902208
-# iteration 6: 23 hits returned
-# calling cd1=5cnbA zcutoff=5.62138772902208 run_dalicon with list: 1eca
-# This is run_dalicon cd1=5cnbA zcutoff=5.62138772902208
-# sub dalicon(tmp.dalicon,T,/home/luholm/DaliLite.v5/bin/serialcompare,../DAT/,../DAT/,0)
-# /home/luholm/DaliLite.v5/bin/serialcompare ../DAT/ ../DAT/ DALICON T < tmp.dalicon > /dev/null
-# cat fort.1[0-9][0-9] > dp_input ; rm fort.* ; /home/luholm/DaliLite.v5/bin/serialcompare ../DAT/ ../DAT/ DP < dp_input > /dev/null
-cat: fort.1[0-9][0-9]: No such file or directory
-rm: cannot remove `fort.*': No such file or directory
-# 8 PDB25 hits above zcutoff=5.62138772902208
-# iteration 7: 23 hits returned
-# calling cd1=5cnbA zcutoff=5.62138772902208 run_dalicon with list: 1eca
-# This is run_dalicon cd1=5cnbA zcutoff=5.62138772902208
-# sub dalicon(tmp.dalicon,T,/home/luholm/DaliLite.v5/bin/serialcompare,../DAT/,../DAT/,0)
-# /home/luholm/DaliLite.v5/bin/serialcompare ../DAT/ ../DAT/ DALICON T < tmp.dalicon > /dev/null
-# cat fort.1[0-9][0-9] > dp_input ; rm fort.* ; /home/luholm/DaliLite.v5/bin/serialcompare ../DAT/ ../DAT/ DP < dp_input > /dev/null
-cat: fort.1[0-9][0-9]: No such file or directory
-rm: cannot remove `fort.*': No such file or directory
-# 8 PDB25 hits above zcutoff=5.62138772902208
-# iteration 8: 23 hits returned
-# calling cd1=5cnbA zcutoff=5.62138772902208 run_dalicon with list: 1eca
-# This is run_dalicon cd1=5cnbA zcutoff=5.62138772902208
-# sub dalicon(tmp.dalicon,T,/home/luholm/DaliLite.v5/bin/serialcompare,../DAT/,../DAT/,0)
-# /home/luholm/DaliLite.v5/bin/serialcompare ../DAT/ ../DAT/ DALICON T < tmp.dalicon > /dev/null
-# cat fort.1[0-9][0-9] > dp_input ; rm fort.* ; /home/luholm/DaliLite.v5/bin/serialcompare ../DAT/ ../DAT/ DP < dp_input > /dev/null
-cat: fort.1[0-9][0-9]: No such file or directory
-rm: cannot remove `fort.*': No such file or directory
-# 8 PDB25 hits above zcutoff=5.62138772902208
-# 8 PDB25 hits above zcutoff=5.62138772902208
-# got 0 / 0 hits from pdb-BLAST
-# sub wolf(WOLF,/home/luholm/DaliLite.v5/bin/serialcompare,../DAT/,../DAT/,0)
-wolf: /home/luholm/DaliLite.v5/bin/serialcompare ../DAT/ ../DAT/ WOLF > /dev/null ; cat fort.1[0-9][0-9] > wolf_output ; rm fort.1[0-9][0-9] ; /home/luholm/DaliLite.v5/bin/serialcompare ../DAT/ ../DAT/ DP < wolf_output > /dev/null ; cat fort.1[0-9][0-9] | perl /home/luholm/DaliLite.v5/bin/dccp2dalicon.pl > dalicon_input ; rm -f fort.1[0-9][0-9] 
-cat: fort.1[0-9][0-9]: No such file or directory
-rm: cannot remove `fort.1[0-9][0-9]': No such file or directory
-cat: fort.1[0-9][0-9]: No such file or directory
-# sub dalicon(dalicon_input,T,/home/luholm/DaliLite.v5/bin/serialcompare,../DAT/,../DAT/,0)
-# /home/luholm/DaliLite.v5/bin/serialcompare ../DAT/ ../DAT/ DALICON T < dalicon_input > /dev/null
-# cat fort.1[0-9][0-9] > dp_input ; rm fort.* ; /home/luholm/DaliLite.v5/bin/serialcompare ../DAT/ ../DAT/ DP < dp_input > /dev/null
-cat: fort.1[0-9][0-9]: No such file or directory
-rm: cannot remove `fort.*': No such file or directory
-rm -f fort.* ; /home/luholm/DaliLite.v5/bin/serialcompare ../DAT/ ../DAT/ PARSI > /dev/null
-cat fort.1[0-9][0-9] > filter_input ; rm -f fort.*; /home/luholm/DaliLite.v5/bin/serialcompare ../DAT/ ../DAT/ FILTER95 < filter_input 
-cat: fort.1[0-9][0-9]: No such file or directory
-sort -nr fort.1[0-9][0-9] | uniq | perl /home/luholm/DaliLite.v5/bin/pipe96-free.pl 1.0 2 > dalicon_input ; rm -f fort.* 
-sort: open failed: fort.1[0-9][0-9]: No such file or directory
-# sub dalicon(dalicon_input,T,/home/luholm/DaliLite.v5/bin/serialcompare,../DAT/,../DAT/,0)
-# /home/luholm/DaliLite.v5/bin/serialcompare ../DAT/ ../DAT/ DALICON T < dalicon_input > /dev/null
-# cat fort.1[0-9][0-9] > dp_input ; rm fort.* ; /home/luholm/DaliLite.v5/bin/serialcompare ../DAT/ ../DAT/ DP < dp_input > /dev/null
-cat: fort.1[0-9][0-9]: No such file or directory
-rm: cannot remove `fort.*': No such file or directory
-# sub wolf(WOLF,/home/luholm/DaliLite.v5/bin/serialcompare,../DAT/,../DAT/,2)
-wolf: /home/luholm/DaliLite.v5/bin/serialcompare ../DAT/ ../DAT/ WOLF > /dev/null ; cat fort.1[0-9][0-9] > wolf_output ; rm fort.1[0-9][0-9] ; /home/luholm/DaliLite.v5/bin/serialcompare ../DAT/ ../DAT/ DP < wolf_output > /dev/null ; cat fort.1[0-9][0-9] | perl /home/luholm/DaliLite.v5/bin/dccp2dalicon.pl > dalicon_input ; rm -f fort.1[0-9][0-9] 
-cat: fort.1[0-9][0-9]: No such file or directory
-rm: cannot remove `fort.1[0-9][0-9]': No such file or directory
-cat: fort.1[0-9][0-9]: No such file or directory
-# sub dalicon(dalicon_input,T,/home/luholm/DaliLite.v5/bin/serialcompare,../DAT/,../DAT/,2)
-# /home/luholm/DaliLite.v5/bin/serialcompare ../DAT/ ../DAT/ DALICON T < dalicon_input > /dev/null
-# cat fort.1[0-9][0-9] > dp_input ; rm fort.* ; /home/luholm/DaliLite.v5/bin/serialcompare ../DAT/ ../DAT/ DP < dp_input > /dev/null
-cat: fort.1[0-9][0-9]: No such file or directory
-rm: cannot remove `fort.*': No such file or directory
-rm -f fort.* ; /home/luholm/DaliLite.v5/bin/serialcompare ../DAT/ ../DAT/ PARSI > /dev/null
-cat fort.1[0-9][0-9] > filter_input ; rm -f fort.*; /home/luholm/DaliLite.v5/bin/serialcompare ../DAT/ ../DAT/ FILTER95 < filter_input 
-cat: fort.1[0-9][0-9]: No such file or directory
-sort -nr fort.1[0-9][0-9] | uniq | perl /home/luholm/DaliLite.v5/bin/pipe96-free.pl 1.0 2 > dalicon_input ; rm -f fort.* 
-sort: open failed: fort.1[0-9][0-9]: No such file or directory
-# sub dalicon(dalicon_input,T,/home/luholm/DaliLite.v5/bin/serialcompare,../DAT/,../DAT/,2)
-# /home/luholm/DaliLite.v5/bin/serialcompare ../DAT/ ../DAT/ DALICON T < dalicon_input > /dev/null
-# cat fort.1[0-9][0-9] > dp_input ; rm fort.* ; /home/luholm/DaliLite.v5/bin/serialcompare ../DAT/ ../DAT/ DP < dp_input > /dev/null
-cat: fort.1[0-9][0-9]: No such file or directory
-rm: cannot remove `fort.*': No such file or directory
-Final 5cnbA zcutoff is 5.62138772902208
-# 5cnbA generate_FSSP
-perl /home/luholm/DaliLite.v5/bin/sortdccp.pl < 5cnbA.dccp | perl /home/luholm/DaliLite.v5/bin/fsspfilter.pl 5cnbA 2 1 1 | /home/luholm/DaliLite.v5/bin/fssp 5cnbA 1 ../DAT/ ../DAT/ | perl /home/luholm/DaliLite.v5/bin/fsspselect.pl pdb.list 2 1 | perl /home/luholm/DaliLite.v5/bin/htmljs.pl ../DAT/ ../DAT/ test "walk" "summary"  > 5cnbA.html 2> 5cnbA.txt
