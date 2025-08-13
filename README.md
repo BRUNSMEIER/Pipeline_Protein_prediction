@@ -142,7 +142,10 @@ python <script_name>.py
 - **`prep.py`** — Alternative version of `predictcif.py` for running Protenix directly.
 - **`supfampred.py`** — Generates `.tbl` format reports from SUPFAM classification output.  
   This python file is retained here in this folder due to tbl results' low human readability.
-  
+- **`extractzscore.py`** — Extract Z-scores from DALI output TXT files and generate CSV
+- **`fasta2json.py`** — Convert the raw input of FASTA sequences into json format, which is required by PROTENIX. Usage:
+    python fasta2json.py <input.fasta> 
+
 ---
 
 ## Notes
