@@ -93,9 +93,9 @@ Automates PyMOL visualisations (not part of `pipeline.py` on the server):
 python predictcif.py          # Generate .mmCIF from sequences
 python convert.py             #  → Convert .cif to .pdb
 ```
-Copy the resulting `.mmCIF`/`.pdb` files into the server directory:
+Automatically generate the resulting `.pdb` files into the server directory:
 ```
-/mnt/data2/supfam/<Your_Name>/
+/mnt/data2/supfam/<this student's name>/
 ```
 
 ### Stage B — Classification & Alignment (Server)
