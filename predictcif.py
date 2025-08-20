@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
-predict_reference.py
+predictcif.py
 --------------------
-Run Protenix on `target_without_msa.json` and store the first generated model
-as `reference.pdb`.
-
+Run Protenix on `7.6.2.14.json` and store the first generated model
+as `7.6.2.14.pdb`.
+Use command 'conda activate protoneix' to initiate virtual environment
 Workflow
 --------
 1. Launch Protenix and place its output under `predicted_structures/tmp_reference`.
@@ -12,7 +12,6 @@ Workflow
 3. If no PDB exists, take the first *.cif*, convert it to PDB with *gemmi*.
 4. Copy the chosen PDB to `reference.pdb`.
 """
-
 import subprocess, glob, shutil, sys
 from pathlib import Path
 import gemmi                         # pip install gemmi

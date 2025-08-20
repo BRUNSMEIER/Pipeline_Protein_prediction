@@ -25,12 +25,13 @@ The outputs reproduce the results used in the thesis.
 ## Workflow Overview (Two-Stage Execution)
 
 ```
-Stage A — Structure Prediction (Protenix/PyMOL environment, off-server)
+Stage A — Structure Prediction (Protenix environment, UCL server Coulomb)
+  conda activate protoneix #initiate virtual environment
   FASTA → JSON (e.g., fasta2json.py)
       → Protenix → mmCIF (.cif)  (predictcif.py)
       → mmCIF → PDB (.pdb)       (also contained in predictcif.py)
 
-Stage B — Classification & Alignment (UCL server)
+Stage B — Classification & Alignment (Server main environment, UCL server Coulomb)
   SUPFAM → .tbl + HTML report   (pipeline.py / supfamhtml.py)
   DaliLite → alignments + Z-scores (pipeline.py / dali.py)
   →  PyMOL figures (pymol1.py)
@@ -87,7 +88,7 @@ Automates PyMOL visualisations (not part of `pipeline.py` on the server):
 
 ## Running Instructions
 
-### Stage A — Structure Prediction (Protenix/PyMOL environment)
+### Stage A — Structure Prediction (Protenix environment)
 ```bash
 python predictcif.py          # Generate .mmCIF from sequences
 
