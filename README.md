@@ -26,7 +26,7 @@ The outputs reproduce the results used in the thesis.
 
 ```
 Stage A — Structure Prediction (Protenix environment, UCL server Coulomb)
-  conda activate protoneix #initiate virtual environment
+  conda activate protoneix #initiate virtual environment (The spelling of protenix environment on server needs to be fixed)
   FASTA → JSON (e.g., fasta2json.py)
       → Protenix → mmCIF (.cif)  (predictcif.py)
       → mmCIF → PDB (.pdb)       (also contained in predictcif.py)
